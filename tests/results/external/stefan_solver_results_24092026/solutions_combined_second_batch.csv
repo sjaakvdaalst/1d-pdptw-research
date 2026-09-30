@@ -1,0 +1,20 @@
+sep=;
+;;Instance;Instance;Solution;Solution;Solution;Solution;Solution;Solution;Solution;Solution;Solution;Solution;Solution;Solution;Pricing;Pricing
+Computer;Date;problem type;instance name;UB;LB tree;LB root;LB root+cuts;time root [s];time root+cuts [s];time limit [s];pricing time;number Solved Nodes;number RMP Iterations;number pricings solved;number columns generated;ng Size;network sizes
+n23m0026.hpc.itc.rwth-aachen.de;2026-09-23 12:17:11;PDPTW-Dest;ber-n100-5_node_restriction_percentage_50%;1398;1398;1398;1398;0;0.0461921;3600;0.0443368;1;6;6;209;5;2 5 10 15 -1 
+Computer;Date;problem type;instance name;UB;LB tree;LB root;LB root+cuts;time root [s];time root+cuts [s];time limit [s];pricing time;number Solved Nodes;number RMP Iterations;number pricings solved;number columns generated;ng Size;network sizes
+n23m0026.hpc.itc.rwth-aachen.de;2026-09-23 12:17:11;PDPTW-Dest;ber-n100-5_node_restriction_percentage_5%;1158.5;1119.83;1119.83;1119.83;0.041561;0.041561;3600;1153.02;70405;413976;413976;6.45518e+06;5;2 5 10 15 -1 
+Computer;Date;problem type;instance name;UB;LB tree;LB root;LB root+cuts;time root [s];time root+cuts [s];time limit [s];pricing time;number Solved Nodes;number RMP Iterations;number pricings solved;number columns generated;ng Size;network sizes
+n23m0026.hpc.itc.rwth-aachen.de;2026-09-23 12:17:11;PDPTW-Dest;ber-n100-5_node_restriction_percentage_75%;1212.5;1212.5;1212.5;1212.5;0;0.0906013;3600;0.0873841;1;11;11;445;5;2 5 10 15 -1 
+Computer;Date;problem type;instance name;UB;LB tree;LB root;LB root+cuts;time root [s];time root+cuts [s];time limit [s];pricing time;number Solved Nodes;number RMP Iterations;number pricings solved;number columns generated;ng Size;network sizes
+n23m0026.hpc.itc.rwth-aachen.de;2026-09-23 12:17:12;PDPTW-Dest;nyc-n100-3_node_restriction_percentage_25%;454;454;454;454;0;0.501017;3600;0.494185;1;16;16;660;5;2 5 10 15 -1 
+Computer;Date;problem type;instance name;UB;LB tree;LB root;LB root+cuts;time root [s];time root+cuts [s];time limit [s];pricing time;number Solved Nodes;number RMP Iterations;number pricings solved;number columns generated;ng Size;network sizes
+n23m0026.hpc.itc.rwth-aachen.de;2026-09-23 12:18:00;PDPTW-Dest;nyc-n100-3_node_restriction_percentage_50%;534.5;534.5;534.5;534.5;0;0.363282;3600;0.358403;1;14;14;495;5;2 5 10 15 -1 
+Computer;Date;problem type;instance name;UB;LB tree;LB root;LB root+cuts;time root [s];time root+cuts [s];time limit [s];pricing time;number Solved Nodes;number RMP Iterations;number pricings solved;number columns generated;ng Size;network sizes
+n23m0026.hpc.itc.rwth-aachen.de;2026-09-23 12:18:00;PDPTW-Dest;nyc-n100-3_node_restriction_percentage_5%;111;110.75;110.75;110.75;3.90111;3.90111;3600;45.7057;50;934;934;32709;5;2 5 10 15 -1 
+Computer;Date;problem type;instance name;UB;LB tree;LB root;LB root+cuts;time root [s];time root+cuts [s];time limit [s];pricing time;number Solved Nodes;number RMP Iterations;number pricings solved;number columns generated;ng Size;network sizes
+n23m0026.hpc.itc.rwth-aachen.de;2026-09-23 12:18:01;PDPTW-Dest;nyc-n100-3_node_restriction_percentage_75%;517;517;517;517;0;0.327393;3600;0.323672;1;11;11;392;5;2 5 10 15 -1 
+Computer;Date;problem type;instance name;UB;LB tree;LB root;LB root+cuts;time root [s];time root+cuts [s];time limit [s];pricing time;number Solved Nodes;number RMP Iterations;number pricings solved;number columns generated;ng Size;network sizes
+n23m0026.hpc.itc.rwth-aachen.de;2026-09-23 12:18:01;PDPTW-Dest;nyc-n100-4_25req_25veh_node_restriction_percentage_5%;283.5;283.5;283.5;283.5;0;0.0407971;3600;0.0363966;1;27;27;328;5;2 5 10 15 -1 
+Computer;Date;problem type;instance name;UB;LB tree;LB root;LB root+cuts;time root [s];time root+cuts [s];time limit [s];pricing time;number Solved Nodes;number RMP Iterations;number pricings solved;number columns generated;ng Size;network sizes
+n23m0026.hpc.itc.rwth-aachen.de;2026-09-23 12:18:01;PDPTW-Dest;toy_instance;15;15;15;15;0;0.000741731;3600;5.9404e-05;1;2;2;4;5;2 5 10 15 -1 

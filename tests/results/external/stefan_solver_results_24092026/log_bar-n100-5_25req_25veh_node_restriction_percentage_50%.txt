@@ -1,0 +1,33 @@
+Initializing CG for instance bar-n100-5_25req_25veh_node_restriction_percentage_50%... 
+-------------------------------------------------------------------------------------------------------
+Time........	Node no(level)	Nodes(open/term/all)	......LB......UB.current additional info
+-------------------------------------------------------------------------------------------------------
+00:00:00.016	Node     0( 0)	(    0/    1/    1)	   384.5   1e+11   384.5	int: currently best solution 
+
+Overall computation time: 0.0166717s
+Computation Time for first integer solution: 0.016646s
+Computation Time for best integer solution: 0.0166476s
+Computation Time for separation: 0 (0%)
+Computation Time for pricing: 0.0155049 (93%)
+Computation Time for reoptimization: 0.000829605 (4%)
+Number of Simplex iterations: 57
+Number of RMP iterations: 5
+Number of columns generated: 83
+Number of pricing problems solved: 5
+Number of cuts generated: 0
+Number of B&B-Nodes solved/generated: 1/1
+Best integer solution: 
+P([2] @9 t=140/293)D([2] @3 t=159/293)P([22] @3 t=189/278)D([22] @8 t=196/278) (Cost: 36.5)
+P([3] @10 t=281/428)D([3] @11 t=290/428)P([15] @11 t=384/473)D([15] @22 t=395/473) (Cost: 23.5)
+P([4] @12 t=360/472)D([4] @13 t=379/472) (Cost: 30)
+P([5] @14 t=217/358)D([5] @1 t=235/358)P([13] @1 t=265/335)D([13] @16 t=274/335)P([11] @24 t=312/384)D([11] @25 t=325/384) (Cost: 50.5)
+P([7] @7 t=56/201)P([17] @21 t=92/147)D([7, 17] @20 t=100/147)P([20] @12 t=292/429)D([20] @30 t=304/429)P([6] @18 t=336/441)D([6] @19 t=344/441)P([0] @2 t=382/468)D([0] @3 t=398/468) (Cost: 83)
+P([8] @21 t=0/480)D([8] @17 t=7/480)P([16] @24 t=195/327)D([16] @27 t=206/327) (Cost: 25.5)
+P([12] @20 t=0/143)D([12] @26 t=13/143) (Cost: 20)
+P([14] @15 t=0/480)P([1] @4 t=28/145)D([14, 1] @5 t=33/145)P([10] @23 t=253/384)D([10] @15 t=264/384) (Cost: 32)
+P([18] @28 t=218/362)D([18] @6 t=225/362) (Cost: 11)
+P([19] @19 t=173/320)D([19] @29 t=184/320) (Cost: 16)
+P([23] @11 t=0/156)D([23] @31 t=12/156)P([21] @31 t=74/204)D([21] @22 t=81/204)P([9] @22 t=111/155)D([9] @4 t=124/155) (Cost: 41.5)
+P([24] @18 t=66/219)D([24] @6 t=77/219) (Cost: 15.5)
+Overall cost: 385
+

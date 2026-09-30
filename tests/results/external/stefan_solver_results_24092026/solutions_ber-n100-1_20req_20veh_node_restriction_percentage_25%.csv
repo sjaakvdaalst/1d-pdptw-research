@@ -1,0 +1,4 @@
+sep=;
+;;Instance;Instance;Solution;Solution;Solution;Solution;Solution;Solution;Solution;Solution;Solution;Solution;Solution;Solution;Pricing;Pricing
+Computer;Date;problem type;instance name;UB;LB tree;LB root;LB root+cuts;time root [s];time root+cuts [s];time limit [s];pricing time;number Solved Nodes;number RMP Iterations;number pricings solved;number columns generated;ng Size;network sizes
+n23m0026.hpc.itc.rwth-aachen.de;2026-09-22 16:54:47;PDPTW-Dest;ber-n100-1_20req_20veh_node_restriction_percentage_25%;758.5;758.5;758.5;758.5;0;0.00188294;3600;0.000974694;1;4;4;36;5;2 5 10 15 -1 

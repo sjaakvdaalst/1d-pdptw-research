@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.venv/
+.vscode/
+*.log
+*.lp
+*.sol
+*.ilp
+gurobi.lic
+results/raw/
+file_list.txt

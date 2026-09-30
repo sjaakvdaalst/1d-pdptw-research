@@ -1,0 +1,269 @@
+{
+  "vehicle": {
+    "capacity": 100,
+    "fleet_size": 6
+  },
+  "real_world_inspiration": "N/A",
+  "source_publication": "N/A",
+  "problem_name": "1D-PDPTW",
+  "location_distribution": "custom",
+  "depot_location_distribution": "fixed",
+  "time_horizon": 240,
+  "maximal_time_window": 120,
+  "depot": 0,
+  "json_format_version": [
+    "sb",
+    11
+  ],
+
+
+
+  "depot_node": 0,
+  "nodes": [
+    {
+      "id": 0,
+      "label": "Depot",
+      "coordinates": {
+        "tuple": [
+          0.0,
+          0.0
+        ],
+        "type": "custom"
+      },
+      "requests": {
+        "pickups": [],
+        "deliveries": []
+      },
+      "base_instance_id": 0
+    },
+    {
+      "id": 1,
+      "label": "P1",
+      "coordinates": {
+        "tuple": [
+          1.0,
+          0.0
+        ],
+        "type": "custom"
+      },
+      "requests": {
+        "pickups": [
+          0,
+          1,
+          2
+        ],
+        "deliveries": []
+      },
+      "base_instance_id": 1
+    },
+    {
+      "id": 2,
+      "label": "D1",
+      "coordinates": {
+        "tuple": [
+          1.0,
+          2.0
+        ],
+        "type": "custom"
+      },
+      "requests": {
+        "pickups": [],
+        "deliveries": [
+          0,
+          1,
+          2
+        ]
+      },
+      "base_instance_id": 2
+    },
+    {
+      "id": 3,
+      "label": "P2",
+      "coordinates": {
+        "tuple": [
+          5.0,
+          2.0
+        ],
+        "type": "custom"
+      },
+      "requests": {
+        "pickups": [
+          3,
+          4,
+          5
+        ],
+        "deliveries": []
+      },
+      "base_instance_id": 3
+    },
+    {
+      "id": 4,
+      "label": "D2",
+      "coordinates": {
+        "tuple": [
+          5.0,
+          6.0
+        ],
+        "type": "custom"
+      },
+      "requests": {
+        "pickups": [],
+        "deliveries": [
+          3,
+          4,
+          5
+        ]
+      },
+      "base_instance_id": 4
+    }
+  ],
+
+
+
+  "requests": [
+    {
+      "id": 0,
+      "demand": 10,
+      "pickup": {
+        "node": 1,
+        "earliest": 10,
+        "latest": 240,
+        "duration": 0
+      },
+      "delivery": {
+        "node": 2,
+        "earliest": 0,
+        "latest": 150,
+        "duration": 0
+      }
+    },
+    {
+      "id": 1,
+      "demand": 10,
+      "pickup": {
+        "node": 1,
+        "earliest": 25,
+        "latest": 240,
+        "duration": 0
+      },
+      "delivery": {
+        "node": 2,
+        "earliest": 0,
+        "latest": 175,
+        "duration": 0
+      }
+    },
+    {
+      "id": 2,
+      "demand": 10,
+      "pickup": {
+        "node": 1,
+        "earliest": 30,
+        "latest": 240,
+        "duration": 0
+      },
+      "delivery": {
+        "node": 2,
+        "earliest": 0,
+        "latest": 145,
+        "duration": 0
+      }
+    },
+    {
+      "id": 3,
+      "demand": 10,
+      "pickup": {
+        "node": 3,
+        "earliest": 50,
+        "latest": 240,
+        "duration": 0
+      },
+      "delivery": {
+        "node": 4,
+        "earliest": 0,
+        "latest": 210,
+        "duration": 0
+      }
+    },
+    {
+      "id": 4,
+      "demand": 10,
+      "pickup": {
+        "node": 3,
+        "earliest": 50,
+        "latest": 240,
+        "duration": 0
+      },
+      "delivery": {
+        "node": 4,
+        "earliest": 0,
+        "latest": 225,
+        "duration": 0
+      }
+    },
+    {
+      "id": 5,
+      "demand": 10,
+      "pickup": {
+        "node": 3,
+        "earliest": 50,
+        "latest": 240,
+        "duration": 0
+      },
+      "delivery": {
+        "node": 4,
+        "earliest": 0,
+        "latest": 200,
+        "duration": 0
+      }
+    }
+  ],
+
+
+
+  "travel_times": [
+    [
+      0,
+      1,
+      16,
+      32,
+      64
+    ],
+    [
+      1,
+      0,
+      2,
+      128,
+      256
+    ],
+    [
+      16,
+      2,
+      0,
+      4,
+      512
+    ],
+    [
+      32,
+      128,
+      4,
+      0,
+      8
+    ],
+    [
+      64,
+      256,
+      512,
+      8,
+      0
+    ]
+  ],
+
+
+
+  "base_instance_name": "toy_instance",
+  "instance_name": "toy_instance_no-service-times",
+  "variant": {
+    "node_restriction_percentage": null
+  }
+}

@@ -1,0 +1,628 @@
+{
+    "vehicle": {
+        "capacity": 6,
+        "fleet_size": 25
+    },
+    "real_world_inspiration": "New-York",
+    "source_publication": "Sartori and Buriol (2019)",
+    "problem_name": "PDPTW",
+    "location_distribution": "random",
+    "depot_location_distribution": "central",
+    "time_horizon": 480,
+    "maximal_time_window": 120,
+    "depot": 0,
+    "json_format_version": [
+        "sb",
+        11
+    ],
+    "depot_node": 0,
+    "nodes": [
+        {
+            "id": 0,
+            "coordinates": {
+                "tuple": [
+                    40.754623,
+                    -73.894852
+                ],
+                "type": "spherical"
+            },
+            "requests": {
+                "pickups": [],
+                "deliveries": []
+            },
+            "base_instance_id": 0
+        },
+        {
+            "id": 1,
+            "coordinates": {
+                "tuple": [
+                    40.643078,
+                    -73.79023
+                ],
+                "type": "spherical"
+            },
+            "requests": {
+                "pickups": [
+                    1,
+                    7,
+                    14,
+                    19,
+                    20,
+                    24
+                ],
+                "deliveries": [
+                    4,
+                    8,
+                    15,
+                    21
+                ]
+            },
+            "base_instance_id": 31
+        },
+        {
+            "id": 2,
+            "coordinates": {
+                "tuple": [
+                    40.766438,
+                    -73.931854
+                ],
+                "type": "spherical"
+            },
+            "requests": {
+                "pickups": [
+                    5,
+                    6,
+                    8,
+                    10,
+                    18,
+                    22
+                ],
+                "deliveries": [
+                    2,
+                    12,
+                    19,
+                    23
+                ]
+            },
+            "base_instance_id": 34
+        },
+        {
+            "id": 3,
+            "coordinates": {
+                "tuple": [
+                    40.764793,
+                    -73.970512
+                ],
+                "type": "spherical"
+            },
+            "requests": {
+                "pickups": [
+                    0,
+                    2,
+                    3,
+                    16
+                ],
+                "deliveries": [
+                    5,
+                    11,
+                    14,
+                    24
+                ]
+            },
+            "base_instance_id": 97
+        },
+        {
+            "id": 4,
+            "coordinates": {
+                "tuple": [
+                    40.769276,
+                    -73.984787
+                ],
+                "type": "spherical"
+            },
+            "requests": {
+                "pickups": [
+                    13,
+                    15,
+                    21
+                ],
+                "deliveries": [
+                    0,
+                    3,
+                    7,
+                    9,
+                    10,
+                    16,
+                    17,
+                    20
+                ]
+            },
+            "base_instance_id": 4
+        },
+        {
+            "id": 5,
+            "coordinates": {
+                "tuple": [
+                    40.779224,
+                    -73.962135
+                ],
+                "type": "spherical"
+            },
+            "requests": {
+                "pickups": [
+                    4,
+                    9,
+                    11,
+                    12,
+                    17,
+                    23
+                ],
+                "deliveries": [
+                    1,
+                    6,
+                    13,
+                    18,
+                    22
+                ]
+            },
+            "base_instance_id": 51
+        }
+    ],
+    "requests": [
+        {
+            "id": 0,
+            "demand": 1,
+            "pickup": {
+                "node": 3,
+                "earliest": 86,
+                "latest": 206,
+                "duration": 2
+            },
+            "delivery": {
+                "node": 4,
+                "earliest": 103,
+                "latest": 223,
+                "duration": 2
+            }
+        },
+        {
+            "id": 1,
+            "demand": 1,
+            "pickup": {
+                "node": 1,
+                "earliest": 15,
+                "latest": 135,
+                "duration": 2
+            },
+            "delivery": {
+                "node": 5,
+                "earliest": 32,
+                "latest": 152,
+                "duration": 2
+            }
+        },
+        {
+            "id": 2,
+            "demand": 1,
+            "pickup": {
+                "node": 3,
+                "earliest": 127,
+                "latest": 247,
+                "duration": 2
+            },
+            "delivery": {
+                "node": 2,
+                "earliest": 151,
+                "latest": 271,
+                "duration": 2
+            }
+        },
+        {
+            "id": 3,
+            "demand": 1,
+            "pickup": {
+                "node": 3,
+                "earliest": 96,
+                "latest": 216,
+                "duration": 2
+            },
+            "delivery": {
+                "node": 4,
+                "earliest": 135,
+                "latest": 255,
+                "duration": 2
+            }
+        },
+        {
+            "id": 4,
+            "demand": 1,
+            "pickup": {
+                "node": 5,
+                "earliest": 331,
+                "latest": 451,
+                "duration": 2
+            },
+            "delivery": {
+                "node": 1,
+                "earliest": 353,
+                "latest": 473,
+                "duration": 2
+            }
+        },
+        {
+            "id": 5,
+            "demand": 1,
+            "pickup": {
+                "node": 2,
+                "earliest": 328,
+                "latest": 448,
+                "duration": 2
+            },
+            "delivery": {
+                "node": 3,
+                "earliest": 357,
+                "latest": 477,
+                "duration": 2
+            }
+        },
+        {
+            "id": 6,
+            "demand": 1,
+            "pickup": {
+                "node": 2,
+                "earliest": 36,
+                "latest": 156,
+                "duration": 2
+            },
+            "delivery": {
+                "node": 5,
+                "earliest": 55,
+                "latest": 175,
+                "duration": 2
+            }
+        },
+        {
+            "id": 7,
+            "demand": 1,
+            "pickup": {
+                "node": 1,
+                "earliest": 10,
+                "latest": 130,
+                "duration": 2
+            },
+            "delivery": {
+                "node": 4,
+                "earliest": 31,
+                "latest": 151,
+                "duration": 2
+            }
+        },
+        {
+            "id": 8,
+            "demand": 1,
+            "pickup": {
+                "node": 2,
+                "earliest": 283,
+                "latest": 403,
+                "duration": 2
+            },
+            "delivery": {
+                "node": 1,
+                "earliest": 336,
+                "latest": 456,
+                "duration": 2
+            }
+        },
+        {
+            "id": 9,
+            "demand": 1,
+            "pickup": {
+                "node": 5,
+                "earliest": 233,
+                "latest": 353,
+                "duration": 2
+            },
+            "delivery": {
+                "node": 4,
+                "earliest": 273,
+                "latest": 393,
+                "duration": 2
+            }
+        },
+        {
+            "id": 10,
+            "demand": 2,
+            "pickup": {
+                "node": 2,
+                "earliest": 285,
+                "latest": 405,
+                "duration": 2
+            },
+            "delivery": {
+                "node": 4,
+                "earliest": 313,
+                "latest": 433,
+                "duration": 2
+            }
+        },
+        {
+            "id": 11,
+            "demand": 1,
+            "pickup": {
+                "node": 5,
+                "earliest": 145,
+                "latest": 265,
+                "duration": 2
+            },
+            "delivery": {
+                "node": 3,
+                "earliest": 164,
+                "latest": 284,
+                "duration": 2
+            }
+        },
+        {
+            "id": 12,
+            "demand": 1,
+            "pickup": {
+                "node": 5,
+                "earliest": 316,
+                "latest": 436,
+                "duration": 2
+            },
+            "delivery": {
+                "node": 2,
+                "earliest": 340,
+                "latest": 460,
+                "duration": 2
+            }
+        },
+        {
+            "id": 13,
+            "demand": 1,
+            "pickup": {
+                "node": 4,
+                "earliest": 13,
+                "latest": 133,
+                "duration": 2
+            },
+            "delivery": {
+                "node": 5,
+                "earliest": 44,
+                "latest": 164,
+                "duration": 2
+            }
+        },
+        {
+            "id": 14,
+            "demand": 3,
+            "pickup": {
+                "node": 1,
+                "earliest": 52,
+                "latest": 172,
+                "duration": 2
+            },
+            "delivery": {
+                "node": 3,
+                "earliest": 91,
+                "latest": 211,
+                "duration": 2
+            }
+        },
+        {
+            "id": 15,
+            "demand": 1,
+            "pickup": {
+                "node": 4,
+                "earliest": 55,
+                "latest": 175,
+                "duration": 2
+            },
+            "delivery": {
+                "node": 1,
+                "earliest": 82,
+                "latest": 202,
+                "duration": 2
+            }
+        },
+        {
+            "id": 16,
+            "demand": 1,
+            "pickup": {
+                "node": 3,
+                "earliest": 29,
+                "latest": 149,
+                "duration": 2
+            },
+            "delivery": {
+                "node": 4,
+                "earliest": 46,
+                "latest": 166,
+                "duration": 2
+            }
+        },
+        {
+            "id": 17,
+            "demand": 1,
+            "pickup": {
+                "node": 5,
+                "earliest": 302,
+                "latest": 422,
+                "duration": 2
+            },
+            "delivery": {
+                "node": 4,
+                "earliest": 326,
+                "latest": 446,
+                "duration": 2
+            }
+        },
+        {
+            "id": 18,
+            "demand": 1,
+            "pickup": {
+                "node": 2,
+                "earliest": 63,
+                "latest": 183,
+                "duration": 2
+            },
+            "delivery": {
+                "node": 5,
+                "earliest": 84,
+                "latest": 204,
+                "duration": 2
+            }
+        },
+        {
+            "id": 19,
+            "demand": 1,
+            "pickup": {
+                "node": 1,
+                "earliest": 55,
+                "latest": 175,
+                "duration": 2
+            },
+            "delivery": {
+                "node": 2,
+                "earliest": 78,
+                "latest": 198,
+                "duration": 2
+            }
+        },
+        {
+            "id": 20,
+            "demand": 3,
+            "pickup": {
+                "node": 1,
+                "earliest": 54,
+                "latest": 174,
+                "duration": 2
+            },
+            "delivery": {
+                "node": 4,
+                "earliest": 75,
+                "latest": 195,
+                "duration": 2
+            }
+        },
+        {
+            "id": 21,
+            "demand": 1,
+            "pickup": {
+                "node": 4,
+                "earliest": 122,
+                "latest": 242,
+                "duration": 2
+            },
+            "delivery": {
+                "node": 1,
+                "earliest": 144,
+                "latest": 264,
+                "duration": 2
+            }
+        },
+        {
+            "id": 22,
+            "demand": 1,
+            "pickup": {
+                "node": 2,
+                "earliest": 122,
+                "latest": 242,
+                "duration": 2
+            },
+            "delivery": {
+                "node": 5,
+                "earliest": 153,
+                "latest": 273,
+                "duration": 2
+            }
+        },
+        {
+            "id": 23,
+            "demand": 1,
+            "pickup": {
+                "node": 5,
+                "earliest": 17,
+                "latest": 137,
+                "duration": 2
+            },
+            "delivery": {
+                "node": 2,
+                "earliest": 43,
+                "latest": 163,
+                "duration": 2
+            }
+        },
+        {
+            "id": 24,
+            "demand": 1,
+            "pickup": {
+                "node": 1,
+                "earliest": 207,
+                "latest": 327,
+                "duration": 2
+            },
+            "delivery": {
+                "node": 3,
+                "earliest": 232,
+                "latest": 352,
+                "duration": 2
+            }
+        }
+    ],
+    "travel_times": [
+        [
+            0.0,
+            16.0,
+            7.0,
+            10.0,
+            12.0,
+            13.0
+        ],
+        [
+            19.0,
+            0.0,
+            23.0,
+            26.0,
+            29.0,
+            30.0
+        ],
+        [
+            6.0,
+            19.0,
+            0.0,
+            7.0,
+            10.0,
+            10.0
+        ],
+        [
+            10.0,
+            24.0,
+            9.0,
+            0.0,
+            4.0,
+            4.0
+        ],
+        [
+            12.0,
+            25.0,
+            10.0,
+            3.0,
+            0.0,
+            6.0
+        ],
+        [
+            13.0,
+            26.0,
+            12.0,
+            4.0,
+            5.0,
+            0.0
+        ]
+    ],
+    "base_instance_name": "nyc-n100-4",
+    "instance_name": "nyc-n100-4_25req_25veh_node_restriction_percentage_5%",
+    "variant": {
+        "node_restriction_percentage": 5
+    }
+}

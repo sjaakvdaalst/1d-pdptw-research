@@ -1,0 +1,2089 @@
+{
+    "vehicle": {
+        "capacity": 100,
+        "fleet_size": 25
+    },
+    "real_world_inspiration": "Barcelona",
+    "source_publication": "Sartori and Buriol (2019)",
+    "problem_name": "PDPTW",
+    "location_distribution": "random",
+    "depot_location_distribution": "random",
+    "time_horizon": 480,
+    "maximal_time_window": 120,
+    "depot": 0,
+    "non_loop_route_penalty_ratio" : 0.5,
+    "json_format_version": [
+        "sb",
+        11
+    ],
+    "depot_node": 0,
+    "nodes": [
+        {
+            "id": 0,
+            "coordinates": {
+                "tuple": [
+                    41.401354,
+                    2.1403998
+                ],
+                "type": "spherical"
+            },
+            "requests": {
+                "pickups": [],
+                "deliveries": []
+            },
+            "base_instance_id": 0
+        },
+        {
+            "id": 1,
+            "coordinates": {
+                "tuple": [
+                    41.4018962,
+                    2.1724332
+                ],
+                "type": "spherical"
+            },
+            "requests": {
+                "pickups": [
+                    13
+                ],
+                "deliveries": [
+                    5
+                ]
+            },
+            "base_instance_id": 68
+        },
+        {
+            "id": 2,
+            "coordinates": {
+                "tuple": [
+                    41.370429,
+                    2.0981744
+                ],
+                "type": "spherical"
+            },
+            "requests": {
+                "pickups": [
+                    0
+                ],
+                "deliveries": []
+            },
+            "base_instance_id": 11
+        },
+        {
+            "id": 3,
+            "coordinates": {
+                "tuple": [
+                    41.4348352,
+                    2.1782147
+                ],
+                "type": "spherical"
+            },
+            "requests": {
+                "pickups": [
+                    22
+                ],
+                "deliveries": [
+                    0,
+                    2
+                ]
+            },
+            "base_instance_id": 84
+        },
+        {
+            "id": 4,
+            "coordinates": {
+                "tuple": [
+                    41.4257244,
+                    2.1771053
+                ],
+                "type": "spherical"
+            },
+            "requests": {
+                "pickups": [
+                    1
+                ],
+                "deliveries": [
+                    9
+                ]
+            },
+            "base_instance_id": 62
+        },
+        {
+            "id": 5,
+            "coordinates": {
+                "tuple": [
+                    41.4117575,
+                    2.1848994
+                ],
+                "type": "spherical"
+            },
+            "requests": {
+                "pickups": [],
+                "deliveries": [
+                    1,
+                    14
+                ]
+            },
+            "base_instance_id": 66
+        },
+        {
+            "id": 6,
+            "coordinates": {
+                "tuple": [
+                    41.4320888,
+                    2.1555042
+                ],
+                "type": "spherical"
+            },
+            "requests": {
+                "pickups": [],
+                "deliveries": [
+                    18,
+                    24
+                ]
+            },
+            "base_instance_id": 70
+        },
+        {
+            "id": 7,
+            "coordinates": {
+                "tuple": [
+                    41.4527251,
+                    2.22645
+                ],
+                "type": "spherical"
+            },
+            "requests": {
+                "pickups": [
+                    7
+                ],
+                "deliveries": []
+            },
+            "base_instance_id": 22
+        },
+        {
+            "id": 8,
+            "coordinates": {
+                "tuple": [
+                    41.4484207,
+                    2.2071184
+                ],
+                "type": "spherical"
+            },
+            "requests": {
+                "pickups": [],
+                "deliveries": [
+                    22
+                ]
+            },
+            "base_instance_id": 46
+        },
+        {
+            "id": 9,
+            "coordinates": {
+                "tuple": [
+                    41.4462706,
+                    2.0719698
+                ],
+                "type": "spherical"
+            },
+            "requests": {
+                "pickups": [
+                    2
+                ],
+                "deliveries": []
+            },
+            "base_instance_id": 56
+        },
+        {
+            "id": 10,
+            "coordinates": {
+                "tuple": [
+                    41.3780171,
+                    2.1175471
+                ],
+                "type": "spherical"
+            },
+            "requests": {
+                "pickups": [
+                    3
+                ],
+                "deliveries": []
+            },
+            "base_instance_id": 80
+        },
+        {
+            "id": 11,
+            "coordinates": {
+                "tuple": [
+                    41.3601468,
+                    2.0960645
+                ],
+                "type": "spherical"
+            },
+            "requests": {
+                "pickups": [
+                    15,
+                    23
+                ],
+                "deliveries": [
+                    3
+                ]
+            },
+            "base_instance_id": 50
+        },
+        {
+            "id": 12,
+            "coordinates": {
+                "tuple": [
+                    41.3667935,
+                    2.1261419
+                ],
+                "type": "spherical"
+            },
+            "requests": {
+                "pickups": [
+                    4,
+                    20
+                ],
+                "deliveries": []
+            },
+            "base_instance_id": 74
+        },
+        {
+            "id": 13,
+            "coordinates": {
+                "tuple": [
+                    41.4581267,
+                    2.0591767
+                ],
+                "type": "spherical"
+            },
+            "requests": {
+                "pickups": [],
+                "deliveries": [
+                    4
+                ]
+            },
+            "base_instance_id": 81
+        },
+        {
+            "id": 14,
+            "coordinates": {
+                "tuple": [
+                    41.3600793,
+                    2.0732472
+                ],
+                "type": "spherical"
+            },
+            "requests": {
+                "pickups": [
+                    5
+                ],
+                "deliveries": []
+            },
+            "base_instance_id": 91
+        },
+        {
+            "id": 15,
+            "coordinates": {
+                "tuple": [
+                    41.3955765,
+                    2.1251938
+                ],
+                "type": "spherical"
+            },
+            "requests": {
+                "pickups": [
+                    14
+                ],
+                "deliveries": [
+                    10
+                ]
+            },
+            "base_instance_id": 15
+        },
+        {
+            "id": 16,
+            "coordinates": {
+                "tuple": [
+                    41.3738369,
+                    2.1565588
+                ],
+                "type": "spherical"
+            },
+            "requests": {
+                "pickups": [],
+                "deliveries": [
+                    13
+                ]
+            },
+            "base_instance_id": 21
+        },
+        {
+            "id": 17,
+            "coordinates": {
+                "tuple": [
+                    41.3736448,
+                    2.121535
+                ],
+                "type": "spherical"
+            },
+            "requests": {
+                "pickups": [],
+                "deliveries": [
+                    8
+                ]
+            },
+            "base_instance_id": 99
+        },
+        {
+            "id": 18,
+            "coordinates": {
+                "tuple": [
+                    41.4059939,
+                    2.1562849
+                ],
+                "type": "spherical"
+            },
+            "requests": {
+                "pickups": [
+                    6,
+                    24
+                ],
+                "deliveries": []
+            },
+            "base_instance_id": 12
+        },
+        {
+            "id": 19,
+            "coordinates": {
+                "tuple": [
+                    41.4003313,
+                    2.1214845
+                ],
+                "type": "spherical"
+            },
+            "requests": {
+                "pickups": [
+                    19
+                ],
+                "deliveries": [
+                    6
+                ]
+            },
+            "base_instance_id": 3
+        },
+        {
+            "id": 20,
+            "coordinates": {
+                "tuple": [
+                    41.366613,
+                    2.1253745
+                ],
+                "type": "spherical"
+            },
+            "requests": {
+                "pickups": [
+                    12
+                ],
+                "deliveries": [
+                    7,
+                    17
+                ]
+            },
+            "base_instance_id": 41
+        },
+        {
+            "id": 21,
+            "coordinates": {
+                "tuple": [
+                    41.3730639,
+                    2.0917621
+                ],
+                "type": "spherical"
+            },
+            "requests": {
+                "pickups": [
+                    8,
+                    17
+                ],
+                "deliveries": []
+            },
+            "base_instance_id": 48
+        },
+        {
+            "id": 22,
+            "coordinates": {
+                "tuple": [
+                    41.3966977,
+                    2.1209443
+                ],
+                "type": "spherical"
+            },
+            "requests": {
+                "pickups": [
+                    9
+                ],
+                "deliveries": [
+                    15,
+                    21
+                ]
+            },
+            "base_instance_id": 40
+        },
+        {
+            "id": 23,
+            "coordinates": {
+                "tuple": [
+                    41.4151236,
+                    2.1791201
+                ],
+                "type": "spherical"
+            },
+            "requests": {
+                "pickups": [
+                    10
+                ],
+                "deliveries": []
+            },
+            "base_instance_id": 37
+        },
+        {
+            "id": 24,
+            "coordinates": {
+                "tuple": [
+                    41.3738232,
+                    2.1252543
+                ],
+                "type": "spherical"
+            },
+            "requests": {
+                "pickups": [
+                    11,
+                    16
+                ],
+                "deliveries": []
+            },
+            "base_instance_id": 83
+        },
+        {
+            "id": 25,
+            "coordinates": {
+                "tuple": [
+                    41.3514151,
+                    2.0687622
+                ],
+                "type": "spherical"
+            },
+            "requests": {
+                "pickups": [],
+                "deliveries": [
+                    11
+                ]
+            },
+            "base_instance_id": 38
+        },
+        {
+            "id": 26,
+            "coordinates": {
+                "tuple": [
+                    41.4091874,
+                    2.1855491
+                ],
+                "type": "spherical"
+            },
+            "requests": {
+                "pickups": [],
+                "deliveries": [
+                    12
+                ]
+            },
+            "base_instance_id": 85
+        },
+        {
+            "id": 27,
+            "coordinates": {
+                "tuple": [
+                    41.4164718,
+                    2.1338561
+                ],
+                "type": "spherical"
+            },
+            "requests": {
+                "pickups": [],
+                "deliveries": [
+                    16
+                ]
+            },
+            "base_instance_id": 33
+        },
+        {
+            "id": 28,
+            "coordinates": {
+                "tuple": [
+                    41.4281192,
+                    2.1328546
+                ],
+                "type": "spherical"
+            },
+            "requests": {
+                "pickups": [
+                    18
+                ],
+                "deliveries": []
+            },
+            "base_instance_id": 67
+        },
+        {
+            "id": 29,
+            "coordinates": {
+                "tuple": [
+                    41.4216365,
+                    2.174794
+                ],
+                "type": "spherical"
+            },
+            "requests": {
+                "pickups": [],
+                "deliveries": [
+                    19
+                ]
+            },
+            "base_instance_id": 17
+        },
+        {
+            "id": 30,
+            "coordinates": {
+                "tuple": [
+                    41.4081168,
+                    2.1596901
+                ],
+                "type": "spherical"
+            },
+            "requests": {
+                "pickups": [],
+                "deliveries": [
+                    20
+                ]
+            },
+            "base_instance_id": 82
+        },
+        {
+            "id": 31,
+            "coordinates": {
+                "tuple": [
+                    41.4039242,
+                    2.1445631
+                ],
+                "type": "spherical"
+            },
+            "requests": {
+                "pickups": [
+                    21
+                ],
+                "deliveries": [
+                    23
+                ]
+            },
+            "base_instance_id": 13
+        }
+    ],
+    "requests": [
+        {
+            "id": 0,
+            "demand": 46,
+            "pickup": {
+                "node": 2,
+                "earliest": 316,
+                "latest": 436,
+                "duration": 15
+            },
+            "delivery": {
+                "node": 3,
+                "earliest": 348,
+                "latest": 468,
+                "duration": 15
+            }
+        },
+        {
+            "id": 1,
+            "demand": 57,
+            "pickup": {
+                "node": 4,
+                "earliest": 0,
+                "latest": 71,
+                "duration": 15
+            },
+            "delivery": {
+                "node": 5,
+                "earliest": 25,
+                "latest": 145,
+                "duration": 15
+            }
+        },
+        {
+            "id": 2,
+            "demand": 60,
+            "pickup": {
+                "node": 9,
+                "earliest": 140,
+                "latest": 260,
+                "duration": 15
+            },
+            "delivery": {
+                "node": 3,
+                "earliest": 173,
+                "latest": 293,
+                "duration": 15
+            }
+        },
+        {
+            "id": 3,
+            "demand": 30,
+            "pickup": {
+                "node": 10,
+                "earliest": 281,
+                "latest": 401,
+                "duration": 15
+            },
+            "delivery": {
+                "node": 11,
+                "earliest": 308,
+                "latest": 428,
+                "duration": 15
+            }
+        },
+        {
+            "id": 4,
+            "demand": 14,
+            "pickup": {
+                "node": 12,
+                "earliest": 360,
+                "latest": 480,
+                "duration": 15
+            },
+            "delivery": {
+                "node": 13,
+                "earliest": 390,
+                "latest": 472,
+                "duration": 15
+            }
+        },
+        {
+            "id": 5,
+            "demand": 54,
+            "pickup": {
+                "node": 14,
+                "earliest": 217,
+                "latest": 337,
+                "duration": 15
+            },
+            "delivery": {
+                "node": 1,
+                "earliest": 238,
+                "latest": 358,
+                "duration": 15
+            }
+        },
+        {
+            "id": 6,
+            "demand": 58,
+            "pickup": {
+                "node": 18,
+                "earliest": 292,
+                "latest": 412,
+                "duration": 15
+            },
+            "delivery": {
+                "node": 19,
+                "earliest": 321,
+                "latest": 441,
+                "duration": 15
+            }
+        },
+        {
+            "id": 7,
+            "demand": 27,
+            "pickup": {
+                "node": 7,
+                "earliest": 56,
+                "latest": 176,
+                "duration": 15
+            },
+            "delivery": {
+                "node": 20,
+                "earliest": 81,
+                "latest": 201,
+                "duration": 15
+            }
+        },
+        {
+            "id": 8,
+            "demand": 39,
+            "pickup": {
+                "node": 21,
+                "earliest": 0,
+                "latest": 480,
+                "duration": 15
+            },
+            "delivery": {
+                "node": 17,
+                "earliest": 0,
+                "latest": 480,
+                "duration": 15
+            }
+        },
+        {
+            "id": 9,
+            "demand": 39,
+            "pickup": {
+                "node": 22,
+                "earliest": 0,
+                "latest": 117,
+                "duration": 15
+            },
+            "delivery": {
+                "node": 4,
+                "earliest": 35,
+                "latest": 155,
+                "duration": 15
+            }
+        },
+        {
+            "id": 10,
+            "demand": 54,
+            "pickup": {
+                "node": 23,
+                "earliest": 238,
+                "latest": 358,
+                "duration": 15
+            },
+            "delivery": {
+                "node": 15,
+                "earliest": 264,
+                "latest": 384,
+                "duration": 15
+            }
+        },
+        {
+            "id": 11,
+            "demand": 21,
+            "pickup": {
+                "node": 24,
+                "earliest": 236,
+                "latest": 356,
+                "duration": 15
+            },
+            "delivery": {
+                "node": 25,
+                "earliest": 264,
+                "latest": 384,
+                "duration": 15
+            }
+        },
+        {
+            "id": 12,
+            "demand": 54,
+            "pickup": {
+                "node": 20,
+                "earliest": 0,
+                "latest": 85,
+                "duration": 15
+            },
+            "delivery": {
+                "node": 26,
+                "earliest": 23,
+                "latest": 143,
+                "duration": 15
+            }
+        },
+        {
+            "id": 13,
+            "demand": 36,
+            "pickup": {
+                "node": 1,
+                "earliest": 180,
+                "latest": 300,
+                "duration": 15
+            },
+            "delivery": {
+                "node": 16,
+                "earliest": 215,
+                "latest": 335,
+                "duration": 15
+            }
+        },
+        {
+            "id": 14,
+            "demand": 35,
+            "pickup": {
+                "node": 15,
+                "earliest": 0,
+                "latest": 480,
+                "duration": 15
+            },
+            "delivery": {
+                "node": 5,
+                "earliest": 0,
+                "latest": 480,
+                "duration": 15
+            }
+        },
+        {
+            "id": 15,
+            "demand": 55,
+            "pickup": {
+                "node": 11,
+                "earliest": 369,
+                "latest": 480,
+                "duration": 15
+            },
+            "delivery": {
+                "node": 22,
+                "earliest": 395,
+                "latest": 473,
+                "duration": 15
+            }
+        },
+        {
+            "id": 16,
+            "demand": 29,
+            "pickup": {
+                "node": 24,
+                "earliest": 180,
+                "latest": 300,
+                "duration": 15
+            },
+            "delivery": {
+                "node": 27,
+                "earliest": 207,
+                "latest": 327,
+                "duration": 15
+            }
+        },
+        {
+            "id": 17,
+            "demand": 56,
+            "pickup": {
+                "node": 21,
+                "earliest": 0,
+                "latest": 76,
+                "duration": 15
+            },
+            "delivery": {
+                "node": 20,
+                "earliest": 27,
+                "latest": 147,
+                "duration": 15
+            }
+        },
+        {
+            "id": 18,
+            "demand": 13,
+            "pickup": {
+                "node": 28,
+                "earliest": 218,
+                "latest": 338,
+                "duration": 15
+            },
+            "delivery": {
+                "node": 6,
+                "earliest": 242,
+                "latest": 362,
+                "duration": 15
+            }
+        },
+        {
+            "id": 19,
+            "demand": 12,
+            "pickup": {
+                "node": 19,
+                "earliest": 173,
+                "latest": 293,
+                "duration": 15
+            },
+            "delivery": {
+                "node": 29,
+                "earliest": 200,
+                "latest": 320,
+                "duration": 15
+            }
+        },
+        {
+            "id": 20,
+            "demand": 31,
+            "pickup": {
+                "node": 12,
+                "earliest": 277,
+                "latest": 397,
+                "duration": 15
+            },
+            "delivery": {
+                "node": 30,
+                "earliest": 309,
+                "latest": 429,
+                "duration": 15
+            }
+        },
+        {
+            "id": 21,
+            "demand": 45,
+            "pickup": {
+                "node": 31,
+                "earliest": 59,
+                "latest": 179,
+                "duration": 15
+            },
+            "delivery": {
+                "node": 22,
+                "earliest": 84,
+                "latest": 204,
+                "duration": 15
+            }
+        },
+        {
+            "id": 22,
+            "demand": 58,
+            "pickup": {
+                "node": 3,
+                "earliest": 122,
+                "latest": 242,
+                "duration": 15
+            },
+            "delivery": {
+                "node": 8,
+                "earliest": 158,
+                "latest": 278,
+                "duration": 15
+            }
+        },
+        {
+            "id": 23,
+            "demand": 46,
+            "pickup": {
+                "node": 11,
+                "earliest": 0,
+                "latest": 89,
+                "duration": 15
+            },
+            "delivery": {
+                "node": 31,
+                "earliest": 36,
+                "latest": 156,
+                "duration": 15
+            }
+        },
+        {
+            "id": 24,
+            "demand": 33,
+            "pickup": {
+                "node": 18,
+                "earliest": 66,
+                "latest": 186,
+                "duration": 15
+            },
+            "delivery": {
+                "node": 6,
+                "earliest": 99,
+                "latest": 219,
+                "duration": 15
+            }
+        }
+    ],
+    "travel_times": [
+        [
+            0.0,
+            7.0,
+            11.0,
+            11.0,
+            9.0,
+            9.0,
+            10.0,
+            17.0,
+            15.0,
+            13.0,
+            7.0,
+            14.0,
+            10.0,
+            15.0,
+            14.0,
+            6.0,
+            8.0,
+            7.0,
+            6.0,
+            4.0,
+            8.0,
+            11.0,
+            6.0,
+            9.0,
+            8.0,
+            16.0,
+            8.0,
+            6.0,
+            8.0,
+            8.0,
+            6.0,
+            3.0
+        ],
+        [
+            7.0,
+            0.0,
+            16.0,
+            7.0,
+            5.0,
+            4.0,
+            9.0,
+            15.0,
+            12.0,
+            18.0,
+            12.0,
+            17.0,
+            14.0,
+            21.0,
+            19.0,
+            10.0,
+            9.0,
+            12.0,
+            5.0,
+            10.0,
+            12.0,
+            15.0,
+            11.0,
+            4.0,
+            11.0,
+            20.0,
+            3.0,
+            9.0,
+            11.0,
+            5.0,
+            4.0,
+            7.0
+        ],
+        [
+            10.0,
+            15.0,
+            0.0,
+            16.0,
+            16.0,
+            17.0,
+            13.0,
+            21.0,
+            18.0,
+            15.0,
+            6.0,
+            6.0,
+            8.0,
+            18.0,
+            8.0,
+            9.0,
+            11.0,
+            6.0,
+            13.0,
+            8.0,
+            7.0,
+            3.0,
+            11.0,
+            17.0,
+            7.0,
+            10.0,
+            16.0,
+            10.0,
+            13.0,
+            16.0,
+            14.0,
+            11.0
+        ],
+        [
+            11.0,
+            8.0,
+            17.0,
+            0.0,
+            3.0,
+            7.0,
+            8.0,
+            10.0,
+            7.0,
+            19.0,
+            16.0,
+            19.0,
+            19.0,
+            21.0,
+            20.0,
+            14.0,
+            15.0,
+            16.0,
+            9.0,
+            13.0,
+            17.0,
+            16.0,
+            15.0,
+            5.0,
+            16.0,
+            21.0,
+            7.0,
+            10.0,
+            10.0,
+            5.0,
+            8.0,
+            10.0
+        ],
+        [
+            9.0,
+            6.0,
+            16.0,
+            3.0,
+            0.0,
+            5.0,
+            7.0,
+            10.0,
+            7.0,
+            18.0,
+            14.0,
+            19.0,
+            17.0,
+            21.0,
+            19.0,
+            13.0,
+            14.0,
+            14.0,
+            7.0,
+            11.0,
+            15.0,
+            16.0,
+            13.0,
+            4.0,
+            15.0,
+            21.0,
+            6.0,
+            9.0,
+            10.0,
+            3.0,
+            6.0,
+            9.0
+        ],
+        [
+            9.0,
+            5.0,
+            17.0,
+            6.0,
+            4.0,
+            0.0,
+            9.0,
+            13.0,
+            10.0,
+            19.0,
+            14.0,
+            20.0,
+            17.0,
+            21.0,
+            20.0,
+            13.0,
+            12.0,
+            14.0,
+            7.0,
+            11.0,
+            15.0,
+            17.0,
+            13.0,
+            3.0,
+            14.0,
+            21.0,
+            3.0,
+            10.0,
+            12.0,
+            4.0,
+            6.0,
+            9.0
+        ],
+        [
+            10.0,
+            8.0,
+            15.0,
+            8.0,
+            6.0,
+            10.0,
+            0.0,
+            14.0,
+            11.0,
+            17.0,
+            15.0,
+            17.0,
+            19.0,
+            19.0,
+            18.0,
+            12.0,
+            16.0,
+            16.0,
+            9.0,
+            11.0,
+            17.0,
+            14.0,
+            13.0,
+            8.0,
+            16.0,
+            19.0,
+            9.0,
+            8.0,
+            8.0,
+            8.0,
+            8.0,
+            10.0
+        ],
+        [
+            17.0,
+            15.0,
+            22.0,
+            10.0,
+            12.0,
+            13.0,
+            13.0,
+            0.0,
+            5.0,
+            24.0,
+            22.0,
+            24.0,
+            26.0,
+            26.0,
+            25.0,
+            19.0,
+            20.0,
+            22.0,
+            17.0,
+            17.0,
+            24.0,
+            21.0,
+            20.0,
+            13.0,
+            23.0,
+            26.0,
+            13.0,
+            14.0,
+            15.0,
+            14.0,
+            16.0,
+            17.0
+        ],
+        [
+            14.0,
+            12.0,
+            19.0,
+            7.0,
+            9.0,
+            10.0,
+            10.0,
+            5.0,
+            0.0,
+            21.0,
+            19.0,
+            21.0,
+            23.0,
+            23.0,
+            22.0,
+            16.0,
+            17.0,
+            19.0,
+            14.0,
+            14.0,
+            21.0,
+            18.0,
+            17.0,
+            10.0,
+            20.0,
+            23.0,
+            10.0,
+            11.0,
+            12.0,
+            10.0,
+            13.0,
+            14.0
+        ],
+        [
+            13.0,
+            19.0,
+            16.0,
+            19.0,
+            19.0,
+            21.0,
+            16.0,
+            24.0,
+            21.0,
+            0.0,
+            16.0,
+            18.0,
+            20.0,
+            7.0,
+            19.0,
+            13.0,
+            19.0,
+            16.0,
+            16.0,
+            10.0,
+            18.0,
+            15.0,
+            13.0,
+            20.0,
+            17.0,
+            20.0,
+            20.0,
+            13.0,
+            16.0,
+            20.0,
+            17.0,
+            14.0
+        ],
+        [
+            8.0,
+            11.0,
+            6.0,
+            17.0,
+            15.0,
+            13.0,
+            15.0,
+            22.0,
+            20.0,
+            17.0,
+            0.0,
+            9.0,
+            8.0,
+            19.0,
+            11.0,
+            7.0,
+            8.0,
+            2.0,
+            12.0,
+            8.0,
+            6.0,
+            6.0,
+            9.0,
+            14.0,
+            3.0,
+            13.0,
+            12.0,
+            11.0,
+            14.0,
+            15.0,
+            12.0,
+            9.0
+        ],
+        [
+            11.0,
+            15.0,
+            5.0,
+            17.0,
+            17.0,
+            18.0,
+            14.0,
+            22.0,
+            19.0,
+            16.0,
+            8.0,
+            0.0,
+            8.0,
+            18.0,
+            5.0,
+            10.0,
+            12.0,
+            8.0,
+            14.0,
+            8.0,
+            6.0,
+            6.0,
+            11.0,
+            17.0,
+            9.0,
+            6.0,
+            16.0,
+            11.0,
+            14.0,
+            17.0,
+            15.0,
+            12.0
+        ],
+        [
+            8.0,
+            12.0,
+            7.0,
+            17.0,
+            15.0,
+            14.0,
+            15.0,
+            23.0,
+            20.0,
+            17.0,
+            7.0,
+            6.0,
+            0.0,
+            19.0,
+            9.0,
+            8.0,
+            7.0,
+            5.0,
+            12.0,
+            8.0,
+            1.0,
+            9.0,
+            9.0,
+            14.0,
+            4.0,
+            10.0,
+            13.0,
+            12.0,
+            15.0,
+            15.0,
+            12.0,
+            9.0
+        ],
+        [
+            15.0,
+            20.0,
+            17.0,
+            21.0,
+            21.0,
+            22.0,
+            18.0,
+            26.0,
+            23.0,
+            6.0,
+            17.0,
+            20.0,
+            22.0,
+            0.0,
+            20.0,
+            14.0,
+            21.0,
+            18.0,
+            18.0,
+            12.0,
+            19.0,
+            17.0,
+            15.0,
+            21.0,
+            18.0,
+            22.0,
+            21.0,
+            15.0,
+            18.0,
+            21.0,
+            19.0,
+            16.0
+        ],
+        [
+            14.0,
+            18.0,
+            8.0,
+            20.0,
+            20.0,
+            20.0,
+            17.0,
+            25.0,
+            22.0,
+            19.0,
+            10.0,
+            7.0,
+            12.0,
+            21.0,
+            0.0,
+            13.0,
+            16.0,
+            10.0,
+            17.0,
+            11.0,
+            11.0,
+            7.0,
+            14.0,
+            20.0,
+            11.0,
+            5.0,
+            19.0,
+            14.0,
+            16.0,
+            20.0,
+            18.0,
+            15.0
+        ],
+        [
+            6.0,
+            11.0,
+            9.0,
+            14.0,
+            13.0,
+            13.0,
+            10.0,
+            18.0,
+            15.0,
+            12.0,
+            7.0,
+            12.0,
+            11.0,
+            15.0,
+            12.0,
+            0.0,
+            10.0,
+            7.0,
+            10.0,
+            4.0,
+            8.0,
+            9.0,
+            2.0,
+            13.0,
+            7.0,
+            14.0,
+            12.0,
+            7.0,
+            10.0,
+            13.0,
+            11.0,
+            7.0
+        ],
+        [
+            9.0,
+            8.0,
+            14.0,
+            14.0,
+            12.0,
+            10.0,
+            16.0,
+            20.0,
+            18.0,
+            18.0,
+            9.0,
+            14.0,
+            11.0,
+            21.0,
+            17.0,
+            10.0,
+            0.0,
+            9.0,
+            11.0,
+            10.0,
+            9.0,
+            14.0,
+            11.0,
+            11.0,
+            8.0,
+            17.0,
+            9.0,
+            13.0,
+            15.0,
+            13.0,
+            10.0,
+            10.0
+        ],
+        [
+            9.0,
+            12.0,
+            7.0,
+            18.0,
+            15.0,
+            14.0,
+            16.0,
+            23.0,
+            21.0,
+            18.0,
+            4.0,
+            7.0,
+            7.0,
+            20.0,
+            10.0,
+            8.0,
+            8.0,
+            0.0,
+            12.0,
+            9.0,
+            5.0,
+            7.0,
+            10.0,
+            14.0,
+            3.0,
+            12.0,
+            13.0,
+            12.0,
+            15.0,
+            15.0,
+            12.0,
+            10.0
+        ],
+        [
+            6.0,
+            6.0,
+            14.0,
+            10.0,
+            8.0,
+            8.0,
+            11.0,
+            17.0,
+            15.0,
+            16.0,
+            12.0,
+            17.0,
+            15.0,
+            19.0,
+            17.0,
+            10.0,
+            10.0,
+            12.0,
+            0.0,
+            8.0,
+            13.0,
+            14.0,
+            10.0,
+            7.0,
+            12.0,
+            19.0,
+            7.0,
+            7.0,
+            10.0,
+            8.0,
+            5.0,
+            5.0
+        ],
+        [
+            4.0,
+            10.0,
+            8.0,
+            12.0,
+            11.0,
+            12.0,
+            9.0,
+            17.0,
+            14.0,
+            10.0,
+            7.0,
+            11.0,
+            11.0,
+            13.0,
+            11.0,
+            4.0,
+            11.0,
+            8.0,
+            8.0,
+            0.0,
+            9.0,
+            8.0,
+            5.0,
+            11.0,
+            8.0,
+            13.0,
+            11.0,
+            6.0,
+            9.0,
+            11.0,
+            9.0,
+            5.0
+        ],
+        [
+            9.0,
+            12.0,
+            8.0,
+            18.0,
+            16.0,
+            14.0,
+            17.0,
+            24.0,
+            22.0,
+            18.0,
+            8.0,
+            8.0,
+            3.0,
+            20.0,
+            11.0,
+            9.0,
+            7.0,
+            6.0,
+            13.0,
+            10.0,
+            0.0,
+            11.0,
+            10.0,
+            15.0,
+            5.0,
+            11.0,
+            13.0,
+            13.0,
+            16.0,
+            16.0,
+            13.0,
+            10.0
+        ],
+        [
+            10.0,
+            14.0,
+            2.0,
+            16.0,
+            16.0,
+            16.0,
+            13.0,
+            20.0,
+            18.0,
+            15.0,
+            7.0,
+            6.0,
+            10.0,
+            17.0,
+            7.0,
+            8.0,
+            12.0,
+            7.0,
+            13.0,
+            7.0,
+            8.0,
+            0.0,
+            10.0,
+            16.0,
+            7.0,
+            8.0,
+            15.0,
+            10.0,
+            12.0,
+            16.0,
+            14.0,
+            11.0
+        ],
+        [
+            6.0,
+            11.0,
+            9.0,
+            13.0,
+            13.0,
+            13.0,
+            10.0,
+            18.0,
+            15.0,
+            12.0,
+            7.0,
+            11.0,
+            11.0,
+            14.0,
+            12.0,
+            4.0,
+            10.0,
+            7.0,
+            10.0,
+            3.0,
+            9.0,
+            9.0,
+            0.0,
+            13.0,
+            8.0,
+            13.0,
+            12.0,
+            7.0,
+            10.0,
+            13.0,
+            11.0,
+            7.0
+        ],
+        [
+            8.0,
+            4.0,
+            16.0,
+            6.0,
+            4.0,
+            3.0,
+            8.0,
+            13.0,
+            10.0,
+            18.0,
+            13.0,
+            18.0,
+            16.0,
+            20.0,
+            19.0,
+            11.0,
+            11.0,
+            13.0,
+            5.0,
+            10.0,
+            14.0,
+            15.0,
+            12.0,
+            0.0,
+            13.0,
+            20.0,
+            3.0,
+            8.0,
+            11.0,
+            3.0,
+            4.0,
+            7.0
+        ],
+        [
+            7.0,
+            10.0,
+            8.0,
+            16.0,
+            14.0,
+            12.0,
+            15.0,
+            22.0,
+            20.0,
+            16.0,
+            4.0,
+            9.0,
+            6.0,
+            18.0,
+            12.0,
+            7.0,
+            6.0,
+            3.0,
+            11.0,
+            7.0,
+            4.0,
+            8.0,
+            8.0,
+            13.0,
+            0.0,
+            13.0,
+            11.0,
+            11.0,
+            14.0,
+            14.0,
+            11.0,
+            8.0
+        ],
+        [
+            14.0,
+            19.0,
+            8.0,
+            20.0,
+            20.0,
+            21.0,
+            17.0,
+            25.0,
+            22.0,
+            19.0,
+            11.0,
+            6.0,
+            12.0,
+            22.0,
+            5.0,
+            13.0,
+            16.0,
+            11.0,
+            17.0,
+            12.0,
+            10.0,
+            9.0,
+            15.0,
+            21.0,
+            12.0,
+            0.0,
+            20.0,
+            14.0,
+            17.0,
+            21.0,
+            18.0,
+            15.0
+        ],
+        [
+            9.0,
+            4.0,
+            18.0,
+            6.0,
+            5.0,
+            2.0,
+            10.0,
+            12.0,
+            10.0,
+            20.0,
+            14.0,
+            19.0,
+            16.0,
+            22.0,
+            21.0,
+            12.0,
+            11.0,
+            13.0,
+            7.0,
+            12.0,
+            14.0,
+            17.0,
+            13.0,
+            4.0,
+            13.0,
+            21.0,
+            0.0,
+            10.0,
+            13.0,
+            5.0,
+            6.0,
+            9.0
+        ],
+        [
+            5.0,
+            9.0,
+            10.0,
+            10.0,
+            10.0,
+            11.0,
+            7.0,
+            15.0,
+            12.0,
+            12.0,
+            10.0,
+            12.0,
+            14.0,
+            14.0,
+            13.0,
+            7.0,
+            12.0,
+            11.0,
+            6.0,
+            5.0,
+            12.0,
+            9.0,
+            8.0,
+            10.0,
+            11.0,
+            14.0,
+            10.0,
+            0.0,
+            6.0,
+            10.0,
+            7.0,
+            5.0
+        ],
+        [
+            8.0,
+            10.0,
+            13.0,
+            10.0,
+            9.0,
+            12.0,
+            7.0,
+            15.0,
+            12.0,
+            15.0,
+            13.0,
+            15.0,
+            17.0,
+            17.0,
+            16.0,
+            10.0,
+            15.0,
+            14.0,
+            9.0,
+            9.0,
+            15.0,
+            13.0,
+            12.0,
+            10.0,
+            14.0,
+            17.0,
+            11.0,
+            5.0,
+            0.0,
+            10.0,
+            10.0,
+            8.0
+        ],
+        [
+            8.0,
+            5.0,
+            16.0,
+            4.0,
+            2.0,
+            5.0,
+            7.0,
+            11.0,
+            9.0,
+            18.0,
+            14.0,
+            19.0,
+            16.0,
+            21.0,
+            19.0,
+            12.0,
+            13.0,
+            14.0,
+            7.0,
+            10.0,
+            14.0,
+            16.0,
+            12.0,
+            3.0,
+            14.0,
+            21.0,
+            5.0,
+            9.0,
+            10.0,
+            0.0,
+            5.0,
+            8.0
+        ],
+        [
+            6.0,
+            5.0,
+            14.0,
+            8.0,
+            6.0,
+            7.0,
+            9.0,
+            16.0,
+            13.0,
+            16.0,
+            11.0,
+            17.0,
+            14.0,
+            19.0,
+            17.0,
+            10.0,
+            10.0,
+            12.0,
+            2.0,
+            8.0,
+            12.0,
+            14.0,
+            10.0,
+            6.0,
+            12.0,
+            19.0,
+            6.0,
+            7.0,
+            9.0,
+            6.0,
+            0.0,
+            6.0
+        ],
+        [
+            2.0,
+            7.0,
+            12.0,
+            10.0,
+            8.0,
+            9.0,
+            9.0,
+            16.0,
+            14.0,
+            14.0,
+            9.0,
+            15.0,
+            12.0,
+            16.0,
+            15.0,
+            7.0,
+            9.0,
+            9.0,
+            5.0,
+            5.0,
+            9.0,
+            12.0,
+            7.0,
+            8.0,
+            9.0,
+            16.0,
+            8.0,
+            5.0,
+            7.0,
+            8.0,
+            5.0,
+            0.0
+        ]
+    ],
+    "base_instance_name": "bar-n100-5",
+    "instance_name": "bar-n100-5_25req_25veh_node_restriction_percentage_50%",
+    "variant": {
+        "node_restriction_percentage": 50
+    }
+}

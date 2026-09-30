@@ -1,0 +1,32 @@
+Initializing CG for instance ber-n100-1_20req_20veh_node_restriction_percentage_25%... 
+-------------------------------------------------------------------------------------------------------
+Time........	Node no(level)	Nodes(open/term/all)	......LB......UB.current additional info
+-------------------------------------------------------------------------------------------------------
+00:00:00.001	Node     0( 0)	(    0/    1/    1)	   758.5   1e+11   758.5	int: currently best solution 
+
+Overall computation time: 0.00189905s
+Computation Time for first integer solution: 0.00188286s
+Computation Time for best integer solution: 0.00188434s
+Computation Time for separation: 0 (0%)
+Computation Time for pricing: 0.000974694 (51%)
+Computation Time for reoptimization: 0.000638446 (33%)
+Number of Simplex iterations: 46
+Number of RMP iterations: 4
+Number of columns generated: 36
+Number of pricing problems solved: 4
+Number of cuts generated: 0
+Number of B&B-Nodes solved/generated: 1/1
+Best integer solution: 
+P([2] @3 t=2/104)D([2] @7 t=20/104)P([10] @7 t=61/137)D([10] @3 t=79/137) (Cost: 36)
+P([3] @8 t=31/111)D([3] @9 t=54/111)P([14] @9 t=123/212)D([14] @2 t=145/212) (Cost: 61)
+P([4] @8 t=72/201)P([1] @5 t=135/201)D([4, 1] @6 t=170/201)P([5] @6 t=200/219)D([5] @10 t=216/219) (Cost: 100)
+P([6] @13 t=45/143)D([6] @14 t=97/143)P([12] @16 t=137/210)D([12] @19 t=188/210) (Cost: 130.5)
+P([7] @15 t=22/122)D([7] @14 t=26/122) (Cost: 6)
+P([9] @17 t=125/207)D([9] @4 t=141/207) (Cost: 24.5)
+P([11] @18 t=31/127)D([11] @6 t=62/127)P([15] @14 t=95/165)D([15] @13 t=147/165) (Cost: 105.5)
+P([16] @19 t=87/177)D([16] @10 t=139/177) (Cost: 78)
+P([17] @6 t=52/146)D([17] @7 t=94/146)P([0] @3 t=160/207)D([0] @4 t=197/207) (Cost: 102.5)
+P([18] @12 t=27/117)D([18] @1 t=61/117)P([8] @1 t=81/240)P([13] @18 t=116/212)D([8, 13] @16 t=149/212) (Cost: 92)
+P([19] @15 t=26/136)D([19] @11 t=41/136) (Cost: 23.5)
+Overall cost: 759.5
+

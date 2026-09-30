@@ -1,0 +1,28 @@
+Initializing CG for instance nyc-n100-4_25req_25veh_node_restriction_percentage_5%... 
+-------------------------------------------------------------------------------------------------------
+Time........	Node no(level)	Nodes(open/term/all)	......LB......UB.current additional info
+-------------------------------------------------------------------------------------------------------
+00:00:00.040	Node     0( 0)	(    0/    1/    1)	   283.5   1e+11   283.5	int: currently best solution 
+
+Overall computation time: 0.0408413s
+Computation Time for first integer solution: 0.040797s
+Computation Time for best integer solution: 0.0407986s
+Computation Time for separation: 0 (0%)
+Computation Time for pricing: 0.0363966 (89%)
+Computation Time for reoptimization: 0.00386568 (9%)
+Number of Simplex iterations: 280
+Number of RMP iterations: 27
+Number of columns generated: 328
+Number of pricing problems solved: 27
+Number of cuts generated: 0
+Number of B&B-Nodes solved/generated: 1/1
+Best integer solution: 
+P([1] @1 t=15/152)P([6] @2 t=40/152)P([18] @2 t=65/152)P([22] @2 t=124/152)D([1, 6, 18, 22] @5 t=134/152)P([4] @5 t=333/473)P([8] @2 t=347/456)D([4, 8] @1 t=366/456) (Cost: 64)
+P([7] @1 t=10/151)P([20] @1 t=56/151)P([16] @3 t=84/151)P([0] @3 t=88/151)P([3] @3 t=98/151)D([7, 20, 16, 0, 3] @4 t=102/151)P([21] @4 t=124/264)P([15] @4 t=126/202)D([21, 15] @1 t=151/202) (Cost: 55)
+P([11] @5 t=145/284)D([11] @3 t=149/284) (Cost: 6)
+P([13] @4 t=13/164)D([13] @5 t=19/164)P([12] @5 t=318/460)D([12] @2 t=330/460)P([10] @2 t=334/433)P([17] @5 t=346/433)P([9] @5 t=348/393)D([10, 17, 9] @4 t=353/393) (Cost: 33)
+P([14] @1 t=52/211)D([14] @3 t=78/211)P([2] @3 t=129/271)P([23] @5 t=135/163)D([2, 23] @2 t=147/163) (Cost: 51.5)
+P([19] @1 t=55/198)D([19] @2 t=78/198) (Cost: 32.5)
+P([24] @1 t=207/352)P([5] @2 t=330/352)D([24, 5] @3 t=337/352) (Cost: 42)
+Overall cost: 284
+

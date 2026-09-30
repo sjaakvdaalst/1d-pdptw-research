@@ -1,0 +1,23 @@
+Initializing CG for instance toy_instance... 
+-------------------------------------------------------------------------------------------------------
+Time........	Node no(level)	Nodes(open/term/all)	......LB......UB.current additional info
+-------------------------------------------------------------------------------------------------------
+00:00:00.000	Node     0( 0)	(    0/    1/    1)	      15   1e+11      15	int: currently best solution 
+
+Overall computation time: 0.000755265s
+Computation Time for first integer solution: 0.000741645s
+Computation Time for best integer solution: 0.000742511s
+Computation Time for separation: 0 (0%)
+Computation Time for pricing: 5.9404e-05 (7%)
+Computation Time for reoptimization: 0.000455321 (60%)
+Number of Simplex iterations: 8
+Number of RMP iterations: 2
+Number of columns generated: 4
+Number of pricing problems solved: 2
+Number of cuts generated: 0
+Number of B&B-Nodes solved/generated: 1/1
+Best integer solution: 
+P([0] @1 t=10/150)P([1] @1 t=30/150)P([2] @1 t=35/75)D([0, 1, 2] @2 t=37/75) (Cost: 3)
+P([4] @3 t=50/225)P([3] @3 t=55/210)P([5] @3 t=60/200)D([4, 3, 5] @4 t=68/200) (Cost: 12)
+Overall cost: 15
+
