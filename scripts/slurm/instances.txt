@@ -1,0 +1,7 @@
+# path (relative to ~/1d-pdptw-research) | gen_limit_s | mip_limit_s | memory
+instances/medium/nyc-n100-4_25req_25veh_node_restriction_percentage_5%.json|7200|3600|32G
+instances/medium/nyc-n100-3_node_restriction_percentage_5%.json|7200|3600|64G
+instances/medium/nyc-n100-3_node_restriction_percentage_25%.json|7200|3600|64G
+instances/medium/nyc-n100-3_node_restriction_percentage_50%.json|7200|3600|64G
+instances/medium/bar-n100-1_node_restriction_percentage_75%.json|7200|3600|94G
+instances/medium/ber-n100-1_20req_20veh_node_restriction_percentage_25%.json|7200|3600|32G

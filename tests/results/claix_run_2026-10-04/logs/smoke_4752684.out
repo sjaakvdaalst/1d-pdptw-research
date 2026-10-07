@@ -1,0 +1,247 @@
+Gurobi Python Interface can be loaded in Python 3.12.3 with 'import gurobipy'
+[INFO] Module Gurobi/13.0.0 loaded.
+Job 4752684 on r23m0081.hpc.itc.rwth-aachen.de | Sun Oct  4 04:29:13 PM CEST 2026
+Instance: instances/medium/bar-n100-2_20req_20veh_node_restriction_percentage_75%.json | gen=120s mip=120s mode=0 heur=15 noise=0.15
+Python  : Python 3.12.3 | solver: 1d-pdptw_extended_v4.py
+
+============================================================
+Instance : instances/medium/bar-n100-2_20req_20veh_node_restriction_percentage_75%.json
+============================================================
+
+Requests               : 20
+Vehicles               : 20
+Capacity                : 100
+Time horizon            : 480
+Non-loop penalty ratio  : 0.5
+Max subset size         : 10
+Heuristic runs          : 15  (noise_scale=0.15)
+Gen time limit          : 120.0
+MIP time limit          : 120.0
+MIP setting mode        : 0
+Single time window      : True
+
+────────────────────────────────────────────────────────────
+Phase 0: Heuristic route injection (15 regret-2 runs) ...
+────────────────────────────────────────────────────────────
+  Run  1 (       deterministic):   9 new columns  (cumulative:    9)
+  Run  2 (             seed=43):   3 new columns  (cumulative:   12)
+  Run  3 (             seed=44):   5 new columns  (cumulative:   17)
+  Run  4 (             seed=45):   3 new columns  (cumulative:   20)
+  Run  5 (             seed=46):   0 new columns  (cumulative:   20)
+  Run  6 (             seed=47):   0 new columns  (cumulative:   20)
+  Run  7 (             seed=48):   1 new columns  (cumulative:   21)
+  Run  8 (             seed=49):   5 new columns  (cumulative:   26)
+  Run  9 (             seed=50):   1 new columns  (cumulative:   27)
+  Run 10 (             seed=51):   1 new columns  (cumulative:   28)
+  Run 11 (             seed=52):   1 new columns  (cumulative:   29)
+  Run 12 (             seed=53):   0 new columns  (cumulative:   29)
+  Run 13 (             seed=54):   1 new columns  (cumulative:   30)
+  Run 14 (             seed=55):   3 new columns  (cumulative:   33)
+  Run 15 (             seed=56):   0 new columns  (cumulative:   33)
+
+Heuristic columns added : 33
+Largest route (# reqs)  : 5
+Avg route size (# reqs) : 2.6
+Or-opt passes executed  : 27  (moves applied: 21)
+Heuristic time          : 0.49s
+
+────────────────────────────────────────────────────────────
+Phase 1: Generating feasible 1D-PDPTW routes ...
+Start clock: 2026-10-04 16:29:15
+────────────────────────────────────────────────────────────
+
+Generation time limit (120s) reached.
+All subsets up to size 6 are completed.
+Routes found so far: 41,099.
+
+Routes generated (enumeration) : 41,099
+Generation time                 : 120.00s
+Enumeration complete             : False  (only fully covered subset sizes up to 6 of configured max 10 -- objective is optimal only relative to this incomplete candidate pool, NOT a proven global optimum)
+
+Total columns in Omega_hat : 41,132  (33 heuristic + 41099 enumerated)
+Covered requests           : 20 / 20
+
+────────────────────────────────────────────────────────────
+Phase 2: Solving set-partitioning MIP ...
+Start clock: 2026-10-04 16:31:15
+────────────────────────────────────────────────────────────
+
+Set parameter TSPort to value 50039
+Set parameter TokenServer to value "license.itc.rwth-aachen.de"
+Set parameter NodefileStart to value 20
+Set parameter MIPFocus to value 2
+Set parameter Cuts to value 2
+Set parameter Symmetry to value 2
+Set parameter Presolve to value 2
+Set parameter Threads to value 8
+MIP setting mode 0 params: {'MIPFocus': 2, 'Cuts': 2, 'Symmetry': 2, 'Presolve': 2}
+
+Gurobi time limit : 120.0s
+
+Set parameter TimeLimit to value 120
+  [Warm-start hint] 9 heuristic routes injected as MIP start.
+
+Gurobi Optimizer version 13.0.0 build v13.0.0rc1 (linux64 - "Rocky Linux 9.8 (Blue Onyx)")
+
+CPU model: Intel(R) Xeon(R) Platinum 8468, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 96 physical cores, 96 logical processors, using up to 8 threads
+
+Non-default parameters:
+TimeLimit  120
+MIPFocus  2
+NodefileStart  20
+Symmetry  2
+Cuts  2
+TSPort  50039
+Presolve  2
+Threads  8
+
+Optimize a model with 21 rows, 41132 columns and 279806 nonzeros (Min)
+Model fingerprint: 0xdfc3dabd
+Model has 41132 linear objective coefficients
+Variable types: 0 continuous, 41132 integer (41132 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [5e+00, 2e+02]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+01]
+
+
+[SOLUTION #1]  obj=301.5000  bound=-10000000000000000159028911097599180468360808563945281389781327557747838772170381060813469985856815104.0000  gap=no bound yet  t=0.0s
+  Veh  1 [H]: [0, 5]  path: 14 -> 2 -> 2 -> 3
+  Veh  2 [H]: [6]  path: 6 -> 16
+  Veh  3 [H]: [14, 16, 17]  path: 31 -> 23 -> 12 -> 32 -> 24 -> 20
+  Veh  4 [H]: [3]  path: 11 -> 12
+  Veh  5 [H]: [4]  path: 13 -> 1
+  Veh  6 [H]: [2, 8, 12, 13, 19]  path: 28 -> 7 -> 9 -> 18 -> 10 -> 10 -> 15 -> 27 -> 14 -> 22
+  Veh  7 [H]: [1]  path: 4 -> 5
+  Veh  8 [H]: [9, 15]  path: 19 -> 20 -> 29 -> 30
+  Veh  9 [H]: [7, 10, 11, 18]  path: 15 -> 17 -> 25 -> 26 -> 24 -> 21 -> 27 -> 8
+  (9 vehicles active)
+Loaded user MIP start with objective 301.5
+
+Presolve removed 1 rows and 7 columns (presolve time = 5s)...
+Presolve removed 1 rows and 7 columns
+Presolve time: 7.36s
+Presolved: 20 rows, 41125 columns, 238667 nonzeros
+Variable types: 0 continuous, 41125 integer (41125 binary)
+Root relaxation presolve removed 0 rows and 33513 columns
+Root relaxation presolved: 20 rows, 7612 columns, 44514 nonzeros
+
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.1500000e+01   1.900000e+01   0.000000e+00      7s
+      33    2.9700000e+02   0.000000e+00   0.000000e+00      7s
+      33    2.9700000e+02   0.000000e+00   0.000000e+00      7s
+
+Root relaxation: objective 2.970000e+02, 33 iterations, 0.04 seconds (0.09 work units)
+
+[SOLUTION #2]  obj=297.0000  bound=297.0000  gap=0.00%  t=7.4s
+  Veh  1 [H]: [0, 5]  path: 14 -> 2 -> 2 -> 3
+  Veh  2 [H]: [6]  path: 6 -> 16
+  Veh  3 [H]: [3]  path: 11 -> 12
+  Veh  4 [H]: [4]  path: 13 -> 1
+  Veh  5 [H]: [1]  path: 4 -> 5
+  Veh  6 [H]: [9, 11]  path: 19 -> 20 -> 25 -> 26
+  Veh  7 [H]: [2, 7, 8]  path: 15 -> 17 -> 9 -> 18 -> 10 -> 10
+  Veh  8 [H]: [12, 18]  path: 27 -> 8 -> 15 -> 27
+  Veh  9 [H]: [10, 17]  path: 12 -> 32 -> 24 -> 21
+  Veh 10 [H]: [16]  path: 31 -> 23
+  Veh 11 [E]: [13]  path: 28 -> 7
+  Veh 12 [E]: [19]  path: 14 -> 22
+  Veh 13 [E]: [14, 15]  path: 24 -> 20 -> 29 -> 30
+  (13 vehicles active)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0     297.0000000  297.00000  0.00%     -    7s
+
+Explored 1 nodes (33 simplex iterations) in 7.50 seconds (10.05 work units)
+Thread count was 8 (of 96 available processors)
+
+Solution count 2: 297 301.5 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.970000000000e+02, best bound 2.970000000000e+02, gap 0.0000%
+
+User-callback calls 1926, time in user-callback 0.02 sec
+
+Objective  : 297.0000
+MIP gap    : 0.00%
+Status     : Optimal
+NOTE       : route enumeration did not finish (stopped after fully covering subset size 6 of configured max 10) -- this objective is optimal only relative to the resulting incomplete candidate pool, not a proven global optimum, even though MIP gap is 0.00%.
+MIP time   : 7.51s
+
+  Vehicle 1 [H]:
+    Route    : 14 -> 2 -> 2 -> 3
+    Requests : [0, 5]
+    Cost     : 12.5000
+
+  Vehicle 2 [H]:
+    Route    : 6 -> 16
+    Requests : [6]
+    Cost     : 6.5000
+
+  Vehicle 3 [H]:
+    Route    : 11 -> 12
+    Requests : [3]
+    Cost     : 10.5000
+
+  Vehicle 4 [H]:
+    Route    : 13 -> 1
+    Requests : [4]
+    Cost     : 11.5000
+
+  Vehicle 5 [H]:
+    Route    : 4 -> 5
+    Requests : [1]
+    Cost     : 14.5000
+
+  Vehicle 6 [H]:
+    Route    : 19 -> 20 -> 25 -> 26
+    Requests : [9, 11]
+    Cost     : 29.5000
+
+  Vehicle 7 [H]:
+    Route    : 15 -> 17 -> 9 -> 18 -> 10 -> 10
+    Requests : [2, 7, 8]
+    Cost     : 40.5000
+
+  Vehicle 8 [H]:
+    Route    : 27 -> 8 -> 15 -> 27
+    Requests : [12, 18]
+    Cost     : 56.0000
+
+  Vehicle 9 [H]:
+    Route    : 12 -> 32 -> 24 -> 21
+    Requests : [10, 17]
+    Cost     : 49.0000
+
+  Vehicle 10 [H]:
+    Route    : 31 -> 23
+    Requests : [16]
+    Cost     : 9.0000
+
+  Vehicle 11 [E]:
+    Route    : 28 -> 7
+    Requests : [13]
+    Cost     : 13.0000
+
+  Vehicle 12 [E]:
+    Route    : 14 -> 22
+    Requests : [19]
+    Cost     : 13.0000
+
+  Vehicle 13 [E]:
+    Route    : 24 -> 20 -> 29 -> 30
+    Requests : [14, 15]
+    Cost     : 31.5000
+
+Vehicles used : 13 / 20
+Total time    : 128.38s
+
+Results written to: /rwthfs/rz/cluster/home/fhy01810/1d-pdptw-research/tests/results/out_1d_pdptw_ex/out_1d_pdptw_ex_2026-10-04/out_1dpdptw_ex_2026-10-04_bar-n100-2_20req_20veh_node_restriction_percentage_75%.json
+Finished: Sun Oct  4 04:31:23 PM CEST 2026

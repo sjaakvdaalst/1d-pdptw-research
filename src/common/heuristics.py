@@ -108,14 +108,13 @@ def events_to_routes(route_events, requests, depot, c, non_loop_penalty_ratio,
 
         cost = route_cost(events, requests, depot, c, non_loop_penalty_ratio)
 
-        # Physical path (depot -> ... -> depot), kept for display/export
-        # consistency with the enumerated routes' "path" field.
-        path = [depot]
+        # Physical path (first pickup -> ... -> last delivery, no depot),
+        # consistent with the enumerated routes' "path" field.
+        path = []
         for ev_type, rid in events:
             node = (requests[rid]["p_node"] if ev_type == "P"
                     else requests[rid]["d_node"])
             path.append(node)
-        path.append(depot)
         path = tuple(path)
 
         # Skip if a cheaper route for this request set already exists.

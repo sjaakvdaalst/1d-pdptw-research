@@ -31,7 +31,7 @@ def solve(instance_path, single_tw=False):
     print(f"\n{'='*60}\nInstance : {instance_path}\n{'='*60}\n")
 
     Q, K, depot, time_horizon, requests, t, c, pen = parse_instance(
-        instance_path, single_tw=single_tw)
+        instance_path, single_tw=single_tw, free_depot=True)
     R = list(requests.keys())
     print(f"Requests : {len(R)}   Vehicles : {len(K)}   Capacity : {Q}   "
           f"Horizon : {time_horizon}   Single TW : {single_tw}")

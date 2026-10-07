@@ -101,7 +101,6 @@ signal.signal(signal.SIGTERM, _handle_sigterm)
 
 def generate_routes(
     Q,
-    depot,
     time_horizon,
     requests,
     t,
@@ -128,12 +127,16 @@ def generate_routes(
         req  = requests[rid]
         p, d = req["p_node"], req["d_node"]
 
-        start_p = max(t(depot, p), req["p_earliest"])
+        # No depot: the route starts at the pickup at its earliest time and
+        # ends when the delivery is finished, which must be <= horizon.
+        start_p = req["p_earliest"]
         if start_p > req["p_latest"]:
             continue
 
         start_d = max(start_p + req["p_duration"] + t(p, d), req["d_earliest"])
         if start_d > req["d_latest"]:
+            continue
+        if start_d + req["d_duration"] > time_horizon:
             continue
 
         cost = c(p, d)
@@ -144,7 +147,7 @@ def generate_routes(
         best_cost_for_set[s] = cost
         routes.append({
             "requests": s,
-            "path":     (depot, p, d, depot),
+            "path":     (p, d),
             "cost":     cost,
         })
 
@@ -206,14 +209,12 @@ def generate_routes(
             if S in best_cost_for_set:
                 UB = best_cost_for_set[S]
 
-            # INITIAL STATE
+            # INITIAL STATE (virtual, before the first pickup; no depot)
             # (cost, node, load, time, batch, active_dest, served, path,
             #  first_loc)
-            # first_loc tracks the route's first physical stop (the node
-            # visited right after leaving the depot), needed at the
-            # terminal state to decide whether the non-loop penalty
-            # applies (first_loc != active_dest on close-out).
-            start = (0.0, depot, 0, 0.0, frozenset(), None, frozenset(), (depot,), None)
+            # first_loc = route's first physical node (pi_1), fixed by T1 and
+            # carried unchanged; needed for the non-loop penalty at closure.
+            start = (0.0, None, 0, 0.0, frozenset(), None, frozenset(), (), None)
             queue = [start]
             best_route = None
             dominance = {}
@@ -221,7 +222,7 @@ def generate_routes(
             while queue:
 
                 cost, node, load, time, batch, active_dest, served, path, first_loc = heapq.heappop(queue)
-                state_key = (node, load, active_dest, batch, served)
+                state_key = (node, load, active_dest, batch, served, first_loc)
 
                 if cost >= UB:
                     break
@@ -233,24 +234,24 @@ def generate_routes(
 
                 update_dominance(state_key, time, cost)
 
-                # CASE 2: TRY ENDING ROUTE (T2)
+                # T4: CLOSE ROUTE. Deliver the last batch; the last delivery
+                # must be finished by the time horizon. The non-loop penalty
+                # is cost only (no travel time).
                 if served == S:
                     result = deliver(node, time, cost, batch, active_dest)
                     if not result:
                         continue
                     d_time, d_cost = result
 
-                    end_time = d_time + t(active_dest, depot)
                     end_cost = d_cost
-                    if first_loc is not None and first_loc != active_dest:
+                    if first_loc != active_dest:
                         end_cost += non_loop_penalty_ratio * c(active_dest, first_loc)
-                    end_path = path + (active_dest, depot)
 
-                    if end_time <= time_horizon and end_cost < UB:
+                    if d_time <= time_horizon and end_cost < UB:
                         UB = end_cost
                         best_route = {
                             "requests": S,
-                            "path": end_path,
+                            "path": path + (active_dest,),
                             "cost": end_cost
                         }
 
@@ -265,14 +266,11 @@ def generate_routes(
                     p, d = req["p_node"], req["d_node"]
                     demand = req["demand"]
 
-                    # CASE 1: DEPOT -> PICKUP (T1)
+                    # T1: ROUTE START at the first pickup, at its earliest time
                     if load == 0:
-                        arrival = time + t(node, p)
-                        start_t = max(arrival, req["p_earliest"])
+                        start_t = req["p_earliest"]
 
                         if start_t <= req["p_latest"]:
-                            # Depot -> first stop is free.
-                            new_first_loc = first_loc if first_loc is not None else p
                             heapq.heappush(queue, (
                                 cost,
                                 p,
@@ -282,17 +280,17 @@ def generate_routes(
                                 d,
                                 served | {rid},
                                 path + (p,),
-                                new_first_loc,
+                                p,
                             ))
 
-                    # CASE 4 & 5: PICKUP -> PICKUP, SAME DEST
+                    # T2 & T3: PICKUP -> PICKUP, SAME DEST
                     elif active_dest == d:
                         arrival  = time + t(node, p)
                         start    = max(arrival, req["p_earliest"])
                         p_time   = start + req["p_duration"]
                         new_cost = cost + c(node, p)
 
-                        # CASE 4: extend current batch (no intermediate delivery)
+                        # T2: extend current batch (no intermediate delivery)
                         if load + demand <= Q and start <= req["p_latest"]:
                             if deliver(p, p_time, new_cost, batch | {rid}, active_dest) is not None:
                                 heapq.heappush(queue, (
@@ -302,7 +300,7 @@ def generate_routes(
                                     served | {rid}, path + (p,), first_loc
                                 ))
 
-                        # CASE 5: close current batch first, then pick up rid as new singleton
+                        # T3: close current batch first, then pick up rid as new singleton
                         result = deliver(node, time, cost, batch, active_dest)
                         if result is not None:
                             d_time, d_cost = result
@@ -316,7 +314,7 @@ def generate_routes(
                                     served | {rid}, path + (active_dest, p), first_loc
                                 ))
 
-                    # CASE 3: PICKUP -> PICKUP, DIFFERENT DEST (T3)
+                    # T3: PICKUP -> PICKUP, DIFFERENT DEST (deliver, then new batch)
                     else:
                         result = deliver(node, time, cost, batch, active_dest)
                         if not result:
@@ -364,7 +362,7 @@ def _reconstruct_events_1d(path, req_ids, requests):
     Reconstruct the ordered event sequence using DFS to handle intra-node
     requests and multiple visits to the same physical node correctly.
     """
-    path_nodes = list(path)[1:-1]  # Exclude depots
+    path_nodes = list(path)
     target_reqs = set(req_ids)
 
     def dfs(idx, curr_load, unserved, batch_dest):
@@ -421,7 +419,7 @@ def solve(
 
     overall_start = _time.time()
 
-    Q, K, depot, time_horizon, requests, t, c, non_loop_penalty_ratio = parse_instance(instance_path, single_tw=single_tw)
+    Q, K, depot, time_horizon, requests, t, c, non_loop_penalty_ratio = parse_instance(instance_path, single_tw=single_tw, free_depot=True)
     R = list(requests.keys())
 
     print(f"Requests               : {len(R)}")
@@ -478,7 +476,7 @@ def solve(
 
     gen_start = _time.time()
     enum_routes, enumeration_complete, max_subset_size_reached = generate_routes(
-        Q, depot, time_horizon, requests, t, c,
+        Q, time_horizon, requests, t, c,
         max_subset_size=max_subset_size,
         non_loop_penalty_ratio=non_loop_penalty_ratio,
         gen_time_limit=gen_time_limit,
@@ -666,7 +664,7 @@ def solve(
         "n_nodes": len(raw_data.get("nodes", [])),
         "n_vehicles": raw_data.get("vehicle", {}).get("fleet_size"),
         "capacity": raw_data.get("vehicle", {}).get("capacity"),
-        "model": "1dpdptw_extended (no depot cost, non-loop penalty)",
+        "model": "1dpdptw_extended (no depot, non-loop penalty)",
         "non_loop_route_penalty_ratio": non_loop_penalty_ratio,
         "mip_status": m.status,
         "mip_time": mip_time if 'mip_time' in locals() else None,
