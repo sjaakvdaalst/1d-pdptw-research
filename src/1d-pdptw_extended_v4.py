@@ -17,7 +17,7 @@ Brief overview of solution pipeline (see solve() ):
 5. Export results to a JSON results file (same structure as the compact
    model's output).
 
-MIP setting modes (identical in spirit/parameters to the compact model):
+MIP setting modes:
     0 - standard (default)
     1 - focus on closing bounds
     2 - focus on finding new incumbents
@@ -65,23 +65,6 @@ def _handle_sigterm(signum, frame):
 signal.signal(signal.SIGTERM, _handle_sigterm)
 
 
-# MIP setting modes (identical parameter sets to the compact model's
-# MIP_SETTING_MODES; see claude/compact_model_symmetry_analysis.md for the
-# empirical validation behind modes 0 and 1 on the compact formulation).
-#   0 - standard: Gurobi defaults for cuts/heuristics/symmetry, MIPFocus=2
-#       (balanced between bound and incumbent).
-#   1 - focus on closing bounds: heuristics and RINS switched off so every
-#       cycle goes toward proving the bound, MIPFocus=3 (steer toward
-#       proving optimality of the best bound), Symmetry=0 (redundant once
-#       problem-specific symmetry handling exists; kept off here too since
-#       the extended model's set-partitioning MIP has the same all-routes-
-#       interchangeable structure that made Symmetry=2 pure overhead in the
-#       compact model).
-#   2 - focus on finding new incumbents: MIPFocus=1 (prioritize good
-#       feasible solutions over bound improvement), heuristics and RINS
-#       turned up aggressively.
-
-
 # 1.  PARSE INSTANCE
 
 
@@ -127,8 +110,6 @@ def generate_routes(
         req  = requests[rid]
         p, d = req["p_node"], req["d_node"]
 
-        # No depot: the route starts at the pickup at its earliest time and
-        # ends when the delivery is finished, which must be <= horizon.
         start_p = req["p_earliest"]
         if start_p > req["p_latest"]:
             continue
@@ -201,6 +182,9 @@ def generate_routes(
                     print(f"All subsets up to size {k - 1} are completed.")
                     print(f"Routes found so far: {len(routes):,}.")
                     return routes, False, max_size_completed
+                print(f"Subset size {k} complete.")
+                print(f"Elapsed time: {elapsed:.1f}s / {gen_time_limit:.1f}s")
+                print(f"Routes found so far: {len(routes):,}.")
 
             S = frozenset(subset)
             UB = float("inf")
@@ -212,8 +196,7 @@ def generate_routes(
             # INITIAL STATE (virtual, before the first pickup; no depot)
             # (cost, node, load, time, batch, active_dest, served, path,
             #  first_loc)
-            # first_loc = route's first physical node (pi_1), fixed by T1 and
-            # carried unchanged; needed for the non-loop penalty at closure.
+            # first_loc = route's first physical node (pi_1)
             start = (0.0, None, 0, 0.0, frozenset(), None, frozenset(), (), None)
             queue = [start]
             best_route = None
@@ -489,10 +472,7 @@ def solve(
     print(f"Generation time                 : {gen_time:.2f}s")
     print(f"Enumeration complete             : {enumeration_complete}"
           + ("" if enumeration_complete else
-             f"  (only fully covered subset sizes up to {max_subset_size_reached} "
-             f"of configured max {max_subset_size} -- objective is optimal only "
-             f"relative to this incomplete candidate pool, NOT a proven global "
-             f"optimum)"))
+             f"  (only fully covered subset sizes up to {max_subset_size_reached} "))
     print()
 
     routes = heuristic_routes + enum_routes
